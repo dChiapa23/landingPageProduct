@@ -2,7 +2,7 @@
 
 Landing Page for describe a product.
 
-## Preview
+## Preview [live](https://dchiapa23.github.io/landingPageProduct/)
 
 ![Preview 1](https://github.com/dChiapa23/landingPageProduct/assets/119638069/bf6a3a51-7d4e-480f-a23f-f4725f819e4f)
 

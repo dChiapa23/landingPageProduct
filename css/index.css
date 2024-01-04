@@ -1,0 +1,162 @@
+:root {
+  --primary: #d455d8;
+  --secondary: #F8F8F8;
+  --background: #667;
+  --box-background: rgba(0, 0, 0, 0.5);
+}
+
+body{
+  background-color: var(--background);
+  color: var(--secondary);
+  img{
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+  }
+  h1, h2{
+    text-align: center;
+  }
+  h1{
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  p{
+    display: inline-block;
+    margin: 1em 2em;
+  }
+  footer{
+    background-color: var(--box-background);
+    form{
+      align-content: space-evenly;
+      display: flex;
+      flex-wrap: wrap;
+      height: 10em;
+      margin: 0 auto;
+      width: 50%;
+      *{
+        width: 100%;
+      }
+      /* ESTILOS DE INPUT */
+        .input_wrapper {
+          padding: 15px 0 0;
+          position: relative;
+        }
+      
+        .input_field {
+          background: transparent;
+          border: 0;
+          border-bottom: 2px solid var(--secondary);
+          color: var(--secondary);
+          font-size: 16px;
+          outline: 0;
+          padding: 4px 0px;
+          transition: border-color 0.2s;
+        }
+      
+        .input_field::placeholder {
+          color: transparent;
+        }
+      
+        .input_field:placeholder-shown~.input_label {
+          color: var(--secondary);
+          cursor: text;
+          font-size: 16px;
+          top: 20px;
+        }
+      
+        label,
+        .input_field:focus~.input_label {
+          color: var(--secondary);
+          display: block;
+          font-size: 14px;
+          left: -1px;
+          position: absolute;
+          top: 0;
+          transition: 0.3s;
+        }
+      
+        .input_field:focus~.input_label {
+          color: var(--primary);
+        }
+      
+        .input_field:focus {
+          border-bottom: 2px solid var(--primary);
+          caret-color: var(--primary);
+        }
+      /* ESTILOS DE INPUT */
+      /* ESTILOS DE BUTTON */
+        button{
+          background-color: transparent;
+          border-color: var(--primary);
+          border-radius: .5em;
+          color: var(--primary);
+          font-size: 1.25em;
+          padding: 4px 0;
+        }
+      /* ESTILOS DE BUTTON */
+    }
+    p {
+        font-size: 1.25em;
+        text-align: center;
+      }
+  }
+
+}
+
+@media screen and (min-width: 481px) {
+  body{
+    main{
+      margin: 0 4em;
+    }
+     footer{
+      display: flex;
+      flex-direction: column;
+    } 
+  }
+}
+@media screen and (min-width: 838px) {
+  main{
+    display: grid;
+    grid-template-areas: "firstIMG firstIMG firstIMG firstP firstP"
+                         "secondP secondP secondIMG secondIMG secondIMG" ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    img{
+      margin: auto 0;
+      width: 100%;
+    }
+    p{
+      font-size: 1.5em;
+    }
+    #firstIMG {
+      grid-area: firstIMG;
+    }
+    #secondIMG {
+      grid-area: secondIMG;
+    }
+    #firstP{
+      grid-area: firstP;
+    }
+    #secondP {
+      grid-area: secondP;
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  main{
+    p {
+        margin: auto 2em;
+      }
+  }
+  footer{   
+    form {
+      height: auto !important;
+      flex-direction: row;
+      .input_wrapper, button{
+        margin: 0 auto;
+        width: 45%;
+       }
+    }
+  }
+}
